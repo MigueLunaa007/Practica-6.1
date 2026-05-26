@@ -24,10 +24,14 @@ try{
     while (!feof($fp)){
         // leemos una linea del archivo
         $linea = fgets($fp);
+        
+        // verificamos que la linea no este vacia antes de imprimir
+        if (trim($linea) !==''){
+            // htmlspecialchars() para evitar problemas de seguridad con HTML
+             echo $contador . ". " . htmlspecialchars(trim($linea)) . "<br>";
+            $contador++; 
+        }
 
-        // htmlspecialchars() para evitar problemas de seguridad con HTML
-        echo $contador . ". " . htmlspecialchars(trim($linea)) . "<br>";
-        $contador++;
     }
 
     fclose($fp);
