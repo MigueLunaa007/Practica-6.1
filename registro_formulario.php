@@ -1,5 +1,5 @@
 <?php
-$nombreArchivo = "asistentes.txt":
+$nombreArchivo = "asistentes.txt";
 $mensaje = "";
 
 // verificamos si el formulario ha sido enviado por metodo POST
