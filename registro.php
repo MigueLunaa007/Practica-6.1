@@ -35,6 +35,7 @@ try {
 } //try
 
 catch (Exception $e){
-    echo "Ocurrio un error: "  . $e->getMessage();
+    // Corregido: se agregó el punto (.) para concatenar strings en PHP
+    echo "Ocurrio un error: " . $e->getMessage();
 } //catch
 ?>
