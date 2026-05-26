@@ -15,7 +15,7 @@ $nombres = [
 $nombreArchivo = "asistentes.txt";
 
 try {
-    //tratamos de abrir el archivo para escritura
+    //tratamos de abrir el archivo para escritura ("w")
     //si el archivo no existe, se creara automaticamente
     $RArchivo = fopen($nombreArchivo, "w");
 
@@ -29,6 +29,7 @@ try {
         fwrite($RArchivo, $nombre . PHP_EOL); // PHP_EOL inserta un salto de linea compatible con el sistema operativo
     }
 
+    //cerramos el archivo correctamente
     fclose($RArchivo);
     echo "Archivo creado y nombres escritos correctamente.";
 } //try
@@ -36,3 +37,4 @@ try {
 catch (Exception $e){
     echo "Ocurrio un error: "  . $e->getMessage();
 } //catch
+?>
